@@ -1,0 +1,11 @@
+.card-cart .card-body {
+    padding: 0px 2px 0px 2px;
+}
+
+.card-cart .card-header {
+    padding: 5px 5px 5px 5px;
+}
+
+.card-cart .card-footer {
+    padding: 15px 5px 15px 5px;
+}
