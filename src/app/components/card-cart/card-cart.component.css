@@ -1,0 +1,10 @@
+.cart {
+    width: 100%;
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.cart-conclusao {
+    width: 100%;
+    height: 200px;
+}
