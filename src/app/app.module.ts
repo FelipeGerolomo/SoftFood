@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 // Bootstrap Imports
 import { AccordionModule } from 'ngx-bootstrap/accordion';
@@ -43,7 +44,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: false } // <-- debugging purposes only
-    )
+    ),
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
