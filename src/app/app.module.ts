@@ -7,6 +7,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 // Bootstrap Imports
 
+// Services Imports
+import { CartService } from './services/cart.service';
+// Services Imports
+
 import { AppComponent } from './app.component';
 import { PosComponent } from './pages/pos/pos.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -16,6 +20,7 @@ import { GridItensComponent } from './components/grid-itens/grid-itens.component
 import { CardCartComponent } from './components/card-cart/card-cart.component';
 import { CartClienteInformationComponent } from './components/cart-cliente-information/cart-cliente-information.component';
 import { CartConclusaoComponent } from './components/cart-conclusao/cart-conclusao.component';
+
 
 
 const appRoutes: Routes = [
@@ -47,7 +52,7 @@ const appRoutes: Routes = [
     ),
     HttpClientModule,
   ],
-  providers: [],
+  providers: [CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

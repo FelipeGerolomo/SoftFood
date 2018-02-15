@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row">
 
-    <div class="col-md-2 item" *ngFor="let item of itens" (click)="this.getItem(item)">
+    <div class="col-md-2 item" *ngFor="let item of itens" (click)="this.cartService.getItem(item)">
       <div class="card">
         <div class="card-header">
           <div class="text-card-item">

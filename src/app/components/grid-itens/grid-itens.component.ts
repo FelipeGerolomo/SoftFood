@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from '../../services/cart.service';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -9,19 +10,15 @@ import { HttpClient } from '@angular/common/http';
 export class GridItensComponent implements OnInit {
   itens: any;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private cartService: CartService) {
     this.http.get('http://localhost:4200/assets/json/items.json')
       .subscribe(
       (data: any[]) => {
         this.itens = data;
-        console.log(this.itens);
       }
       )
   }
 
-  getItem(id){
-    console.log(id);
-  }
 
   ngOnInit() {
   }
