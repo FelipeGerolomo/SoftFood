@@ -48,6 +48,10 @@ button {
   font-family: 'Open Sans', sans-serif;
 }
 
+.modal-content {
+  width: 850px;
+}
+
 /**====== Botões Básicos css Start ======**/
 .btn-primary, .sweet-alert button.confirm, .wizard > .actions a {
   background-color: #4680ff;

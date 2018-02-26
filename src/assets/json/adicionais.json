@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "NOME_ITEM": "Calabresa",
+        "VALOR": 1.00
+    },
+    {
+        "id": 2,
+        "NOME_ITEM": "Bancon",
+        "VALOR": 1.00
+    },
+    {
+        "id": 3,
+        "NOME_ITEM": "Ovo",
+        "VALOR": 1.00
+    },
+    {
+        "id": 4,
+        "NOME_ITEM": "Musarela",
+        "VALOR": 1.00
+    }
+]

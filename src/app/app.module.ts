@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 // Bootstrap Imports
 import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { ModalModule } from 'ngx-bootstrap/modal';
 // Bootstrap Imports
 
 // Services Imports
@@ -25,7 +26,7 @@ import { CartConclusaoComponent } from './components/cart-conclusao/cart-conclus
 
 const appRoutes: Routes = [
   // { path: '', redirectTo: 'pos', },
-  { path: 'pos', component: PosComponent },
+  { path: '', component: PosComponent },
   { path: 'login', component: PosComponent },
 ];
 
@@ -45,12 +46,13 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    AccordionModule.forRoot(),
+    HttpClientModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: false } // <-- debugging purposes only
     ),
-    HttpClientModule,
+    AccordionModule.forRoot(),
+    ModalModule.forRoot(),
   ],
   providers: [CartService],
   bootstrap: [AppComponent]

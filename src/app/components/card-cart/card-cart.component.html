@@ -11,40 +11,34 @@
             <th scope="col"></th>
           </tr>
         </thead>
-        <tbody >
-          <tr *ngFor="let item of this.cartService.cart">
-            <th>{{item.NOME_ITEM}}</th>
-            <td>R$ {{item.VALOR}},00</td>
-            <td>{{item.count}}</td>
-            <td>R$ {{item.VALOR}},00</td>
+        <tbody *ngIf="this.cartService.cart">
+          <tr *ngFor="let item of this.cartService.cart let i=index;">
+            <th>{{item.NOME_ITEM}}
+              <div *ngFor="let adic of this.cartService.cart[i].ADICIONAIS" class="sub-item">
+                <h6>{{adic.NOME_ITEM}}</h6>
+              </div>
+            </th>
+            <td>R$ {{item.VALOR}},00
+              <div *ngFor="let adic of this.cartService.cart[i].ADICIONAIS" class="sub-item">
+                <h6>R$ {{adic.VALOR}},00</h6>
+              </div>
+            </td>
+            <td>{{item.count}}
+              <div *ngFor="let adic of this.cartService.cart[i].ADICIONAIS" class="sub-item">
+                <h6>{{adic.count}}</h6>
+              </div>
+            </td>
+            <td>R$ {{item.VALOR * item.count}},00
+              <div *ngFor="let adic of this.cartService.cart[i].ADICIONAIS" class="sub-item">
+                <h6>{{adic.VALOR * adic.count}}</h6>
+              </div>
+            </td>
             <td>
               <button type="button" class="btn btn-danger btn-sm">
                 <span class="ti-close"></span>
               </button>
             </td>
           </tr>
-          <!-- <tr>
-            <th>Cachorrão Calabresa</th>
-            <td>R$ 10,00</td>
-            <td>1</td>
-            <td>R$ 10,00</td>
-            <td>
-              <button type="button" class="btn btn-danger btn-sm">
-                <span class="ti-close"></span>
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <th>Cachorrão Calabresa</th>
-            <td>R$ 10,00</td>
-            <td>1</td>
-            <td>R$ 10,00</td>
-            <td>
-              <button type="button" class="btn btn-danger btn-sm">
-                <span class="ti-close"></span>
-              </button>
-            </td>
-          </tr> -->
         </tbody>
       </table>
     </div>
@@ -78,3 +72,50 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+<!-- <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">PRODUTO</th>
+      <th scope="col">PREÇO</th>
+      <th scope="col">QTD.</th>
+      <th scope="col">TOTAL</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of this.cartService.cart">
+      <th>{{item.NOME_ITEM}}
+        <div class="sub-item" *ngFor="let adic of this.cartService.adicionais">
+          <h6>{{adic.NOME_ADIC}}</h6>
+        </div>
+      </th>
+      <td>R$ {{item.VALOR}},00
+        <div class="sub-item" *ngFor="let adic of this.cartService.adicionais">
+          <h6>R$ {{adic.VALOR}},00</h6>
+        </div>
+      </td>
+      <td>{{item.count}}
+        <div class="sub-item" *ngFor="let adic of this.cartService.adicionais">
+          <h6>{{adic.count}}</h6>
+        </div>
+      </td>
+      <td>R$ {{item.VALOR * item.count}},00
+        <div class="sub-item" *ngFor="let adic of this.cartService.adicionais">
+          <h6>R$ {{adic.VALOR}},00</h6>
+        </div>
+      </td>
+      <td>
+        <button type="button" class="btn btn-danger btn-sm">
+          <span class="ti-close"></span>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table> -->

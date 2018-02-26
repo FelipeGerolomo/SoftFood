@@ -1,7 +1,22 @@
 [
-    {"id": 1,"NOME_ITEM": "Cachorrão de Calabresa","VALOR": 10.00},
-    {"id": 2,"NOME_ITEM": "Cachorrão de Frango","VALOR": 10.00},
-    {"id": 3,"NOME_ITEM": "Cachorrão de Carne","VALOR": 10.00},
-    {"id": 4,"NOME_ITEM": "Cachorrão de Bacon e Calabresa","VALOR": 10.00}
+    {
+        "id": 1,
+        "NOME_ITEM": "Cachorrão de Calabresa",
+        "VALOR": 10.00
+    },
+    {
+        "id": 2,
+        "NOME_ITEM": "Cachorrão de Frango",
+        "VALOR": 10.00
+    },
+    {
+        "id": 3,
+        "NOME_ITEM": "Cachorrão de Carne",
+        "VALOR": 10.00
+    },
+    {
+        "id": 4,
+        "NOME_ITEM": "Cachorrão de Bacon e Calabresa",
+        "VALOR": 10.00
+    }
 ]
-

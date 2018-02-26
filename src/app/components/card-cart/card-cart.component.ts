@@ -9,7 +9,7 @@ import { CartService } from '../../services/cart.service';
 export class CardCartComponent implements OnInit {
   
   constructor(private cartService: CartService ) { 
-    console.log(this.cartService.cart);
+    
   }
 
   ngOnInit() {

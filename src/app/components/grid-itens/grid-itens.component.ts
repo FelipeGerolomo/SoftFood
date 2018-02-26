@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { CartService } from '../../services/cart.service';
 import { HttpClient } from '@angular/common/http';
 
@@ -18,8 +18,7 @@ export class GridItensComponent implements OnInit {
       }
       )
   }
-
-
+  
   ngOnInit() {
   }
 
