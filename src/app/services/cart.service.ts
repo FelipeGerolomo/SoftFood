@@ -23,20 +23,25 @@ export class CartService {
     if (this.cart.length == 0) {
       item["count"] = 1;
       this.aux_cart.push(item);
-      console.log("Passo Primeiro IF do GetItem");
+      // console.log("Passo Primeiro IF do GetItem");
     } else {
       let repeat = false;
       for (let i = 0; i < this.cart.length; i++) {
-        if (item["id"] == this.cart[i].id) {
+        if (this.cart[i].ADICIONAIS) {
+          repeat = true;
+          console.log("Tem Adicinal!")
+          this.aux_cart.push(item);
+        } else if (item["id"] == this.cart[i].id) {
+          console.log("Não tem Adicinal!")
           repeat = true;
           this.cart[i].count += 1;
-          console.log("Passo Segundo IF do GetItem");
+          // console.log("Passo Segundo IF do GetItem");
         }
       }
       if (!repeat) {
         item["count"] = 1;
         this.aux_cart.push(item);
-        console.log("Passo Terceiro IF do GetItem");
+        // console.log("Passo Terceiro IF do GetItem");
       }
 
     }
@@ -62,6 +67,7 @@ export class CartService {
       }
 
     }
+    console.log(this.adicionais);
     this.aux_cart[this.aux_cart.length - 1]["ADICIONAIS"] = (this.adicionais);
     console.log(this.aux_cart);
     console.log("Função addAdicional");

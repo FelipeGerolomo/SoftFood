@@ -30,7 +30,7 @@
             </td>
             <td>R$ {{item.VALOR * item.count}},00
               <div *ngFor="let adic of this.cartService.cart[i].ADICIONAIS" class="sub-item">
-                <h6>{{adic.VALOR * adic.count}}</h6>
+                <h6>R$ {{adic.VALOR * adic.count}},00</h6>
               </div>
             </td>
             <td>

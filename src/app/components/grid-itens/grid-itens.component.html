@@ -31,12 +31,9 @@
     </button>
   </div>
   <div class="modal-body">
-    <!-- <ul class="lista-adicionais">
-      <li *ngIf="this.cartService.adicionais[0]">{{this.cartService.adicionais[0].NOME_ADIC}}</li>
-      <li *ngIf="this.cartService.adicionais[1]">{{this.cartService.adicionais[1].NOME_ADIC}}</li>
-      <li *ngIf="this.cartService.adicionais[2]">{{this.cartService.adicionais[2].NOME_ADIC}}</li>
-      <li *ngIf="this.cartService.adicionais[3]">{{this.cartService.adicionais[3].NOME_ADIC}}</li>
-    </ul> -->
+    <ul class="lista-adicionais">
+      <li *ngFor="let adicional of this.cartService.adicionais">{{adicional.NOME_ITEM}} {{adicional.count}}x</li>
+    </ul>
     <table class="table">
       <thead>
         <tr>
